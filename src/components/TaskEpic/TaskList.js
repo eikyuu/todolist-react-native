@@ -2,15 +2,9 @@ import React from "react";
 import { FlatList } from "react-native";
 import TaskTile from "./TaskTile";
 
-const TaskList = ({ tasks, onChangedStatus, onDeleteTask }) => {
+const TaskList = ({ tasks }) => {
   const _renderItem = ({ item }) => (
-    <TaskTile
-      id={item.id}
-      title={item.title}
-      completed={item.completed}
-      onChangedStatus={onChangedStatus}
-      onDeleteTask={onDeleteTask}
-    />
+    <TaskTile id={item.id} title={item.title} completed={item.completed} />
   );
   return (
     <FlatList
